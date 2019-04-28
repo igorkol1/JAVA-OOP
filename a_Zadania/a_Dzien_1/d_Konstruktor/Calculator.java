@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Calculator {
 
-    List<String> history;
+    private static List<String> history;
 
     public Calculator() {
-        this.history = new ArrayList<>();
+        history = new ArrayList<>();
     }
 
     public int add(int num1, int num2) {
@@ -38,18 +38,19 @@ public class Calculator {
         return result;
     }
 
-    public void setHistoryRecord(String record){
+    public void setHistoryRecord(String record) {
         this.history.add(record);
     }
 
-    public void printOperations(){
-        this.history.forEach(System.out::println);
+    public void printOperations() {
+        history.forEach(System.out::println);
     }
 
-    public void clearOperations(){
-        this.history = new ArrayList<>();
+    public void clearOperations() {
+        history = new ArrayList<>();
     }
 
-
-
+    public static List<String> getHistory() {
+        return history;
+    }
 }

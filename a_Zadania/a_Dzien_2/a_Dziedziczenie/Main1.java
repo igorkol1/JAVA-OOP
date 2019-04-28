@@ -8,6 +8,7 @@ public class Main1 {
         advancedCalculator.divide(4, 2);
         advancedCalculator.pow(2, 4);
         advancedCalculator.root(2, 4);
-        advancedCalculator.printOperations();
+        //advancedCalculator.printOperations();
+        advancedCalculator.printGlobalOperations("4");
     }
 }
